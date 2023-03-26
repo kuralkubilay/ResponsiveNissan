@@ -1,0 +1,61 @@
+@import 'variables';
+
+%heading{
+font-family: $second-font;
+color: $text-color;
+}
+
+%p{
+   color: #566480 ;
+   font-size: 17px;
+   font-weight: bold;
+}
+
+%button{
+    padding:  10px 20px;
+    font-weight: bold;
+    color:  white;
+    letter-spacing: 2px;
+    border:  none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+%design{
+    height: 50vh;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    h1{
+        @extend %heading;
+        color: white;
+    }
+    p{
+        @extend %p;
+        text-align: center;
+        font-size: 22px;
+        font-weight: 300;
+        max-width: 500px;
+        color: white;
+    }
+
+    button{
+        @extend %button;
+        background-color: transparent;
+        border: 1px solid white;
+        transform: background-color 0.4s;
+        color: white;
+        padding: 15px 40px;
+        &:hover{
+            background-color:  white;
+            color:  black;
+            transform: rotate(360deg);
+            transition: all 0.7s;
+        }
+    }
+}
